@@ -30,6 +30,8 @@ define("NET_PORTSCAN_NO_SERVICE", false);
  * information on how to use it.
  *
  * @author  Martin Jansen <mj@php.net>
+ * @package Net_Portscan
+ * @category Net
  * @version $Revision$
  */
 class Net_Portscan
