@@ -58,6 +58,7 @@ class Net_Portscan
             return NET_PORTSCAN_NO_SERVICE;
         }
 
+        @fclose($socket);
         return NET_PORTSCAN_SERVICE_FOUND;
     }
 
@@ -79,7 +80,7 @@ class Net_Portscan
      */
     function checkPortRange($host, $minPort, $maxPort, $timeout = 30)
     {
-        for ($i = $minPort; $i <= $maxPort; $i++) {            
+        for ($i = $minPort; $i <= $maxPort; $i++) {
             $retVal[$i] = Net_Portscan::checkPort($host, $i, $timeout);
         }
 
@@ -94,8 +95,8 @@ class Net_Portscan
      *
      * @access public
      * @param  integer Portnumber
-     * @param  string Protocal (default is tcp)
-     * @return string Name of the service
+     * @param  string  Protocol (Is either tcp or udp. Default is tcp.)
+     * @return string  Name of the Internet service associated with $service
      */
     function getService($port, $protocol = "tcp")
     {
@@ -109,9 +110,9 @@ class Net_Portscan
      * Get port that a certain service uses.
      *
      * @access public
-     * @param  string Name of the service
-     * @param  string Protocal (default is tcp)
-     * @return integer Portnumber
+     * @param  string  Name of the service
+     * @param  string  Protocol (Is either tcp or udp. Default is tcp.)
+     * @return integer Internet port which corresponds to $service
      */
     function getPort($service, $protocol = "tcp")
     {
