@@ -24,9 +24,9 @@
 
     <filelist>
       <dir name="/" baseinstalldir="Net_Portscan">
-        <file role="php">Portscan.php</file>
-        <file role="php">test.php</file>
-        <file role="doc">README</file>
+        <file role="php" name="Portscan.php" />
+        <file role="php" name="test.php" />
+        <file role="doc" name="README" /></file>
       </dir>
     </filelist>
   </release>
