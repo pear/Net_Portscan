@@ -21,23 +21,6 @@ checking a whole range of ports on a machine.
   </maintainers>
 
   <release>
-    <version>1.0</version>
-    <date>2001-11-15</date>
-    <state>stable</state>
-    <notes>
-     This is the first stable release.
-    </notes>
-
-    <filelist>
-      <dir name="/" baseinstalldir="Net">
-        <file role="php" name="Portscan.php" />
-        <file role="php" name="test.php" />
-        <file role="doc" name="README" />
-      </dir>
-    </filelist>
-  </release>
-
-  <release>
     <version>1.0.1</version>
     <date>2002-04-09</date>
     <state>stable</state>
@@ -56,5 +39,23 @@ checking a whole range of ports on a machine.
       </dir>
     </filelist>
   </release>
+
+  <changelog>
+    <release>
+      <version>1.0</version>
+      <date>2001-11-15</date>
+      <state>stable</state>
+      <notes>This is the first stable release.</notes>
+
+      <filelist>
+	<dir name="/" baseinstalldir="Net">
+	  <file role="php" name="Portscan.php" />
+	  <file role="php" name="test.php" />
+	  <file role="doc" name="README" />
+	</dir>
+      </filelist>
+    </release>
+  </changelog>
+
 
 </package>
