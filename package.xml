@@ -22,7 +22,7 @@ checking a whole range of ports on a machine.
 
  <release>
   <version>1.0.2</version>
-  <date>2003-04-03</date>
+  <date>2003-04-22</date>
   <state>stable</state>
   <notes>
 This version now closes socket connections immediately after having
