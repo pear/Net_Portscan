@@ -5,6 +5,11 @@
 <package version="1.0">
   <name>Net_Portscan</name>
   <summary>Portscanner utilities.</summary>
+  <description>
+The Net_Portscan package allows one to perform basic portscanning
+functions with PHP. It supports checking an individual port or
+checking a whole range of ports on a machine.
+  </description>
   <license>PHP 2.02</license>
   <maintainers>
     <maintainer>
@@ -14,6 +19,7 @@
       <role>lead</role>
     </maintainer>
   </maintainers>
+
   <release>
     <version>1.0</version>
     <date>2001-11-15</date>
@@ -23,11 +29,32 @@
     </notes>
 
     <filelist>
-      <dir name="/" baseinstalldir="Net_Portscan">
+      <dir name="/" baseinstalldir="Net">
         <file role="php" name="Portscan.php" />
         <file role="php" name="test.php" />
-        <file role="doc" name="README" /></file>
+        <file role="doc" name="README" />
       </dir>
     </filelist>
   </release>
+
+  <release>
+    <version>1.0.1</version>
+    <date>2002-04-09</date>
+    <state>stable</state>
+    <notes>
+     This is a maintenance release to reflect some updates to the
+     directory structure.
+    </notes>
+
+    <filelist>
+      <dir name="/" baseinstalldir="Net">
+        <file role="php" name="Portscan.php" />
+        <file role="doc" name="README.portscan" />
+        <dir name="tests">
+         <file role="php" name="01-portscan.php" />
+        </dir>
+      </dir>
+    </filelist>
+  </release>
+
 </package>
