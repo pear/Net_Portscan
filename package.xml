@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- do not use the "Type" attribute here, that one is only for
+     generated package.xml files -->
+<package>
+  <name>Net_Portscan</name>
+  <summary>Portscanner utilities.</summary>
+  <maintainer>
+    <user>MJ</user>
+    <name>Martin Jansen</name>
+    <email>mj@php.net</email>
+  </maintainer>
+
+  <release>
+    <version>1.0</version>
+    <date>2001-11-15</date>
+    <notes>
+     This is the first stable release.
+    </notes>
+  </release>
+
+  <filelist>
+    <dir name="/" baseinstalldir="Net_Portscan">
+        <file role="php">Portscan.php</file>
+        <file role="php">test.php</file>
+        <file role="text">README</file>
+    </dir>
+  </filelist>
+</package>
