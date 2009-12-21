@@ -1,23 +1,26 @@
 <?php
-/* vim: set expandtab tabstop=4 shiftwidth=4: */
-// +----------------------------------------------------------------------+
-// | PHP Version 4                                                        |
-// +----------------------------------------------------------------------+
-// | Copyright (c) 1997-2003 The PHP Group                                |
-// +----------------------------------------------------------------------+
-// | This source file is subject to version 2.0 of the PHP license,       |
-// | that is bundled with this package in the file LICENSE, and is        |
-// | available at through the world-wide-web at                           |
-// | http://www.php.net/license/2_02.txt.                                 |
-// | If you did not receive a copy of the PHP license and are unable to   |
-// | obtain it through the world-wide-web, please send a note to          |
-// | license@php.net so we can mail you a copy immediately.               |
-// +----------------------------------------------------------------------+
-// | Authors: Martin Jansen <mj@php.net>                                  |
-// |                                                                      |
-// +----------------------------------------------------------------------+
-//
-// $Id$
+/**
+ * PHP 4
+ *
+ * Copyright (c) 1997-2003 The PHP Group
+ *
+ * This source file is subject to version 2.0 of the PHP license,
+ * that is bundled with this package in the file LICENSE, and is
+ * available at through the world-wide-web at
+ * http://www.php.net/license/2_02.txt.
+ * If you did not receive a copy of the PHP license and are unable to
+ * obtain it through the world-wide-web, please send a note to
+ * license@php.net so we can mail you a copy immediately.
+ *
+ * Authors: Martin Jansen <mj@php.net>
+ *
+ * @category Net
+ * @package  Net_Portscan
+ * @author   Martin Jansen <mj@php.net>
+ * @license  PHP 2.02 <http://www.php.net/license/2_02.txt>
+ * @version  CVS: $Id$
+ * @link     http://pear.php.net/net_portscan
+ */
 
 define("NET_PORTSCAN_SERVICE_FOUND", true);
 define("NET_PORTSCAN_NO_SERVICE", false);
@@ -29,10 +32,11 @@ define("NET_PORTSCAN_NO_SERVICE", false);
  * that are connected to the internet. See README for more
  * information on how to use it.
  *
- * @author  Martin Jansen <mj@php.net>
- * @package Net_Portscan
  * @category Net
- * @version $Revision$
+ * @package  Net_Portscan
+ * @author   Martin Jansen <mj@php.net>
+ * @license  PHP 2.02 <http://www.php.net/license/2_02.txt>
+ * @link     http://pear.php.net/net_portscan
  */
 class Net_Portscan
 {
@@ -46,10 +50,12 @@ class Net_Portscan
      * established, there is a service listening on the port.
      * If the connection fails, there is no service.
      *
+     * @param string  $host    Hostname
+     * @param integer $port    Portnumber
+     * @param integer $timeout Timeout for socket connection in seconds
+     *                         (default is 30).
+     *
      * @access public
-     * @param  string  Hostname
-     * @param  integer Portnumber
-     * @param  integer Timeout for socket connection in seconds (default is 30).
      * @return string
      */
     function checkPort($host, $port, $timeout = 30)
@@ -73,11 +79,14 @@ class Net_Portscan
      * This function can scan a range of ports (from $minPort
      * to $maxPort) on the machine $host for running services.
      *
+     * @param string  $host    Hostname
+     * @param integer $minPort Lowest port
+     * @param integer $maxPort Highest port
+     * @param integer $timeout Timeout for socket connection in seconds
+     *                         (default is 30).
+     *
      * @access public
-     * @param  string Hostname
-     * @param  integer Lowest port
-     * @param  integer Highest port
-     * @param  integer Timeout for socket connection in seconds (default is 30).
+     *
      * @return array  Associative array containing the result
      */
     function checkPortRange($host, $minPort, $maxPort, $timeout = 30)
@@ -91,13 +100,15 @@ class Net_Portscan
 
     // }}}
     // {{{ getService()
-    
+
     /**
      * Get name of the service that is listening on a certain port.
      *
+     * @param integer $port     Portnumber
+     * @param string  $protocol Protocol (Is either tcp or udp. Default is tcp.)
+     *
      * @access public
-     * @param  integer Portnumber
-     * @param  string  Protocol (Is either tcp or udp. Default is tcp.)
+     *
      * @return string  Name of the Internet service associated with $service
      */
     function getService($port, $protocol = "tcp")
@@ -111,9 +122,11 @@ class Net_Portscan
     /**
      * Get port that a certain service uses.
      *
+     * @param string $service  Name of the service
+     * @param string $protocol Protocol (Is either tcp or udp. Default is tcp.)
+     *
      * @access public
-     * @param  string  Name of the service
-     * @param  string  Protocol (Is either tcp or udp. Default is tcp.)
+     *
      * @return integer Internet port which corresponds to $service
      */
     function getPort($service, $protocol = "tcp")
@@ -123,4 +136,3 @@ class Net_Portscan
 
     // }}}
 }
-?>

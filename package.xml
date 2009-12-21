@@ -1,79 +1,86 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
-<!-- do not use the "Type" attribute here, that one is only for
-     generated package.xml files -->
-<package version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd">
  <name>Net_Portscan</name>
+ <channel>pear.php.net</channel>
  <summary>Portscanner utilities.</summary>
- <description>
-The Net_Portscan package allows one to perform basic portscanning
+ <description>The Net_Portscan package allows one to perform basic portscanning
 functions with PHP. It supports checking an individual port or
-checking a whole range of ports on a machine.
+checking a whole range of ports on a machine. 
  </description>
+ <lead>
+  <name>Martin Jansen</name>
+  <user>MJ</user>
+  <email>mj@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>YYYY-MM-DD</date>
+ <time>HH:II:SS</time>
+ <version>
+  <release>1.0.3</release>
+  <api>1.0.3</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
  <license>PHP 2.02</license>
- <maintainers>
-  <maintainer>
-   <user>MJ</user>
-   <name>Martin Jansen</name>
-   <email>mj@php.net</email>
-   <role>lead</role>
-  </maintainer>
- </maintainers>
-
- <release>
-  <version>1.0.2</version>
-  <date>2003-04-22</date>
-  <state>stable</state>
-  <notes>
-This version now closes socket connections immediately after having
-opened them, instead of waiting for PHP to do this at the end of the
-script execution. (#23161)
-  </notes>
-  <filelist>
-   <dir name="/" baseinstalldir="Net">
-    <file role="php" name="Portscan.php" />
-    <file role="doc" name="README.portscan" />
-    <dir name="tests">
-     <file role="php" name="01-portscan.php" />
-    </dir>
-   </dir>
-  </filelist>
- </release>
-
+ <notes>
+* Implemented Feature Request #14432: Improve PHPCS results. (Patch by Daniel O'Connor.)
+ </notes>
+ <contents>
+  <dir name="/">
+   <dir name="tests">
+    <file baseinstalldir="Net" name="01-portscan.php" role="php" />
+   </dir> <!-- //tests -->
+   <file baseinstalldir="Net" name="Portscan.php" role="php" />
+   <file baseinstalldir="Net" name="README.portscan" role="doc" />
+  </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.0.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0b1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
  <changelog>
   <release>
-   <version>1.0.1</version>
+   <version>
+    <release>1.0.1</release>
+    <api>1.0.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
    <date>2002-04-09</date>
-   <state>stable</state>
+   <license>PHP 2.02</license>
    <notes>
 This is a maintenance release to reflect some updates to the directory
 structure.
    </notes>
-   <filelist>
-    <dir name="/" baseinstalldir="Net">
-     <file role="php" name="Portscan.php" />
-     <file role="doc" name="README.portscan" />
-     <dir name="tests">
-      <file role="php" name="01-portscan.php" />
-     </dir>
-    </dir>
-   </filelist>
   </release>
-
   <release>
-   <version>1.0</version>
+   <version>
+    <release>1.0</release>
+    <api>1.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
    <date>2001-11-15</date>
-   <state>stable</state>
-   <notes>This is the first stable release.</notes>
-
-   <filelist>
-    <dir name="/" baseinstalldir="Net">
-	 <file role="php" name="Portscan.php" />
-	 <file role="php" name="test.php" />
-	 <file role="doc" name="README" />
-    </dir>
-   </filelist>
+   <license>PHP 2.02</license>
+   <notes>
+This is the first stable release.
+   </notes>
   </release>
  </changelog>
-
 </package>
