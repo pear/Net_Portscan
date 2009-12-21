@@ -16,8 +16,8 @@ checking a whole range of ports on a machine.
   <email>mj@php.net</email>
   <active>yes</active>
  </lead>
- <date>YYYY-MM-DD</date>
- <time>HH:II:SS</time>
+ <date>2009-12-21</date>
+ <time>22:04:00</time>
  <version>
   <release>1.0.3</release>
   <api>1.0.3</api>
