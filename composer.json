@@ -1,0 +1,28 @@
+{
+    "authors": [
+        {
+            "email": "mj@php.net",
+            "name": "Martin Jansen",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    },
+    "description": "More info available on: http://pear.php.net/package/Net_Portscan",
+    "license": "PHP 2.02",
+    "name": "pear/net_portscan",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Net_Portscan",
+        "source": "https://github.com/pear/Net_Portscan"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
