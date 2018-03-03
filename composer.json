@@ -11,17 +11,15 @@
             "./"
         ]
     },
-    "description": "More info available on: http://pear.php.net/package/Net_Portscan",
-    "license": "PHP 2.02",
+    "description": "Perform basic portscanning functions with PHP",
+    "homepage": "http://pear.php.net/package/Net_Portscan",
+    "license": "PHP-3.0",
     "name": "pear/net_portscan",
     "support": {
         "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Net_Portscan",
         "source": "https://github.com/pear/Net_Portscan"
     },
     "type": "library",
-    "require": {
-        "pear/pear_exception": "*"
-    },
     "require-dev": {
         "phpunit/phpunit": "*"
     }
